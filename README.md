@@ -70,6 +70,12 @@ BEGIN
   COMMIT;
 END;
 
+# Ejecutar DOCKER
+- Pocicionarse en la base del proyecto donde esta el docker-compose.yml, hace la unificacion de las 2 imagenes
+- Ejecutar:
+- docker-compose build (Para compilar)
+- docker-compose up -d (Para levantar el contenedor)
+
 
 
 
