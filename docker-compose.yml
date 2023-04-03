@@ -1,0 +1,26 @@
+version: "3.4"
+
+services:
+  back:
+    image: mycompany/myapp:1.0.0
+    container_name: myapp
+    build:
+      dockerfile: Dockerfile
+      context: "./libros"
+    volumes:
+      - /app/node_modules
+      - ./back:/app
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false
+    ports:
+      - 8080:8080
+
+  libreriaFront:
+    build:
+      dockerfile: Dockerfile
+      context: ./LibreriaFront
+    ports:
+      - "4200:4200"
+    volumes:
+      - /app/node_modules
+      - ./tienda:/app
