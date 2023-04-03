@@ -1,0 +1,75 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.main-body {
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0 auto;
+  max-width: 1348px;
+
+  mat-form-field {
+    width: 50%;
+    padding-left: 50%;
+  }
+}
+
+.action {
+  display: flex;
+  gap: 5px;
+}
+
+.mat-toolbar.mat-primary {
+  background: black;
+  color: #fff;
+}
+
+.contenedor {
+  height: 62% !important;
+  width: auto !important;
+  max-width: 100% !important;
+  background: #ffffff;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+.contenedor::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+  width: 7px;
+}
+
+.contenedor::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+  display: none;
+}
+
+.contenedor::-webkit-scrollbar:horizontal {
+  height: 7px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+  background-color: #217fdd;
+  border-radius: 20px;
+  border: 2px solid #217fdd;
+}
+
+.contenedor::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+@media (min-width: 1500px) {
+  .contenedor {
+    height: 72% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contenedor {
+    height: 62% !important;
+  }
+}
